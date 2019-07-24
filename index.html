@@ -29,7 +29,7 @@ extra_css: "carousel.css"
     </div>
   </nav>
 </header>
-
+<body>
 <main role="main">
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -154,6 +154,27 @@ extra_css: "carousel.css"
 
   </div><!-- /.container -->
 
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCWj0uZnBetl-qZRNIKYEl29eEO-uCkxG4",
+    authDomain: "gers-garage.firebaseapp.com",
+    databaseURL: "https://gers-garage.firebaseio.com",
+    projectId: "gers-garage",
+    storageBucket: "gers-garage.appspot.com",
+    messagingSenderId: "458806580449",
+    appId: "1:458806580449:web:d160884a8dc0a5e6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</body>
 
   <!-- FOOTER -->
   <footer class="container">
