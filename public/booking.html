@@ -1,0 +1,135 @@
+
+  
+    <meta charset="utf-8">
+    <title>Ger's Garage</title>
+    <meta name="author" content="Colm Reilly">
+    <meta name="keywords" content="css, examples">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+    <!-- CSS Styling -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Ger's Garage</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">booking <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</header>
+
+  <div class="content">
+    <div class="calendar-container">
+      <div class="calendar"> 
+        <div class="year-header"> 
+          <span class="left-button" id="prev"> ⟨ </span> 
+          <span class="year" id="label"></span> 
+          <span class="right-button" id="next"> ⟩ </span>
+        </div> 
+        <table class="months-table"> 
+          <tbody>
+            <tr class="months-row">
+              <td class="month">Jan</td> 
+              <td class="month">Feb</td> 
+              <td class="month">Mar</td> 
+              <td class="month">Apr</td> 
+              <td class="month">May</td> 
+              <td class="month">Jun</td> 
+              <td class="month">Jul</td>
+              <td class="month">Aug</td> 
+              <td class="month">Sep</td> 
+              <td class="month">Oct</td>          
+              <td class="month">Nov</td>
+              <td class="month">Dec</td>
+            </tr>
+          </tbody>
+        </table> 
+        
+        <table class="days-table"> 
+          <tbody><tr><td class="day">Sun</td> 
+          <td class="day">Mon</td> 
+          <td class="day">Tue</td> 
+          <td class="day">Wed</td> 
+          <td class="day">Thu</td> 
+          <td class="day">Fri</td> 
+          <td class="day">Sat</td>
+        </tr></tbody></table> 
+        <div class="frame"> 
+          <table class="dates-table"> 
+              <tbody class="tbody">             
+              </tbody> 
+          </table>
+        </div> 
+        <button class="button" id="add-button">Add Event</button>
+      </div>
+    </div>
+    <div class="events-container">
+    </div>
+    <div class="dialog" id="dialog">
+        <h2 class="dialog-header"> Add New Event </h2>
+        <form class="form" id="form">
+          <div class="form-container" align="center">
+            <label class="form-label" id="valueFromMyButton" for="name">Event name</label>
+            <input class="input" type="text" id="name" maxlength="36">
+            <label class="form-label" id="valueFromMyButton" for="count">Number of people to invite</label>
+            <input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
+            <input type="button" value="Cancel" class="button" id="cancel-button">
+            <input type="button" value="OK" class="button" id="ok-button">
+          </div>
+        </form>
+      </div>
+  </div>
+  <!-- Dialog Box-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+  </script>
+  <script src="app.js"></script>
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCWj0uZnBetl-qZRNIKYEl29eEO-uCkxG4",
+    authDomain: "gers-garage.firebaseapp.com",
+    databaseURL: "https://gers-garage.firebaseio.com",
+    projectId: "gers-garage",
+    storageBucket: "gers-garage.appspot.com",
+    messagingSenderId: "458806580449",
+    appId: "1:458806580449:web:d160884a8dc0a5e6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2017-{{ site.time | date: "%Y" }} Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+
